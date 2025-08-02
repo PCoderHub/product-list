@@ -17,8 +17,8 @@ function App() {
       pdt.name.toLowerCase().includes(searchInput.toLowerCase())
     );
 
-    if(searchedProducts.length === 0) {
-      alert("No such product found")
+    if (searchedProducts.length === 0) {
+      alert("No such product found");
     }
     console.log(searchedProducts);
     setProductList(searchedProducts);
@@ -38,14 +38,14 @@ function App() {
 
   const handleSort = (e) => {
     const sortInput = e.target.value;
-    if(sortInput === "priceA") {
-      setProductList([...productList].sort((a,b) => a.price - b.price))
-    } else if(sortInput === "priceD") {
-      setProductList([...productList].sort((a,b) => b.price - a.price));
-    } else if(sortInput === "rating") {
-      setProductList([...productList].sort((a,b) => b.rating - a.rating));
+    if (sortInput === "priceA") {
+      setProductList([...productList].sort((a, b) => a.price - b.price));
+    } else if (sortInput === "priceD") {
+      setProductList([...productList].sort((a, b) => b.price - a.price));
+    } else if (sortInput === "rating") {
+      setProductList([...productList].sort((a, b) => b.rating - a.rating));
     }
-  }
+  };
 
   return (
     <>
@@ -85,9 +85,15 @@ function App() {
               <option className="italic text-black" value="">
                 None
               </option>
-              <option className="text-black" value="priceA">Price: Low to High</option>
-              <option className="text-black" value="priceD">Price: High to Low</option>
-              <option className="text-black" value="rating">Rating</option>
+              <option className="text-black" value="priceA">
+                Price: Low to High
+              </option>
+              <option className="text-black" value="priceD">
+                Price: High to Low
+              </option>
+              <option className="text-black" value="rating">
+                Rating
+              </option>
             </select>
           </div>
 
