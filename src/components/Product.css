@@ -1,0 +1,10 @@
+.star-rating::after {
+  content: "★★★★★";
+  background: linear-gradient(
+    90deg,
+    rgb(247, 224, 118) var(--rating-percent),
+    grey var(--rating-percent)
+  );
+  color: transparent;
+  background-clip: text;
+}
